@@ -9,22 +9,39 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F0F2F5"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera"
+      },
+      "bundleIdentifier": "com.maharaniiibp01.parkir"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#F0F2F5"
+      },
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "package": "com.maharaniiibp01.parkir"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "react-native-vision-camera"
+      
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9a88e050-032b-4583-b6db-9ec8b5106dc7"
+      }
     }
   }
 }
