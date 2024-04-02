@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   // section 1
   container: {
     padding: 20,
-    paddingTop: 50,
+
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "white",

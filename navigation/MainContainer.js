@@ -111,6 +111,8 @@ const Index = () => (
       <Stack.Screen name="TiketkeluarsuksesScreen" component={TiketkeluarsuksesScreen} />
       <Stack.Screen name="TidaksesuaiScreen" component={TidaksesuaiScreen} />
       <Stack.Screen name="ScantiketmasukScreen" component={Scantiketmasuk} />
+      <Stack.Screen name="ScannerScreen" component={ScannerScreen} />
+      
 
 
 

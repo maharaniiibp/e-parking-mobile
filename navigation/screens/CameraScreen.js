@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Camera } from 'expo-camera';
 
-const CameraComponent = ({ navigation }) => {
+const CameraScreen = ({ navigation }) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [cameraType, setCameraType] = useState(Camera.Constants.Type.back);
   const cameraRef = useRef(null);
@@ -28,17 +28,22 @@ const CameraComponent = ({ navigation }) => {
   if (hasPermission === false) {
     return <Text>No access to camera</Text>; // Menampilkan pesan jika izin kamera tidak diberikan
   }
-  
 
   return (
     <View style={{ flex: 1 }}>
       <Camera style={{ flex: 1 }} type={cameraType} ref={cameraRef}>
         <View style={{ flex: 1, backgroundColor: 'transparent', flexDirection: 'row' }}>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{ flex: 0.1, alignSelf: 'flex-end', alignItems: 'center' }}
             onPress={handleFlipCamera}
           >
             <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}> Flip </Text>
+          </TouchableOpacity> */}
+          <TouchableOpacity
+            style={{ flex: 0.1, alignSelf: 'flex-start', alignItems: 'center' }}
+            onPress={() => navigation.goBack()} // Contoh menggunakan fungsi navigasi untuk kembali ke layar sebelumnya
+          >
+            <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}> Back </Text>
           </TouchableOpacity>
         </View>
       </Camera>
@@ -46,4 +51,4 @@ const CameraComponent = ({ navigation }) => {
   );
 };
 
-export default CameraComponent;
+export default CameraScreen;

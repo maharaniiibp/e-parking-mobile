@@ -14,15 +14,19 @@ const ScannerScreen = () => {
   const goToScantiketmasuk = () => {
     navigation.navigate("ScantiketmasukScreen");
   };
-
+  const navigateToHome = () => {
+    navigation.navigate("HomeScreen");
+  };
   return (
     <>
       {/* SCAN TIKET MASUK */}
       {/* section 1 */}
       <View style={styles.container}>
-        <View style={styles.left}>
-          <AntDesign name="left" size={24} color="black" />
-        </View>
+        <TouchableOpacity onPress={navigateToHome}>
+          <View style={styles.left}>
+            <AntDesign name="left" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
         <View>
           <Text style={styles.textscan}>Scan Tiket</Text>
         </View>
@@ -57,7 +61,7 @@ const styles = StyleSheet.create({
   // section 1
   container: {
     padding: 20,
-    paddingTop: 50,
+    // paddingTop: 50,
     flexDirection: "row",
     alignItems: "center",
     

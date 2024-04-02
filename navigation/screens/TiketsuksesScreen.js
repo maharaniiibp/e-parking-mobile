@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   // section 1
   container: {
     padding: 20,
-    paddingTop: 50,
+    // paddingTop: 50,
     alignSelf: "center",
     alignItems: "flex-start",
   },

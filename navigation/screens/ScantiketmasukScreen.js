@@ -23,10 +23,13 @@ export default function TiketManualMasuk() {
     navigation.navigate("TiketsuksesScreen");
   };
 
-  const navigateToScannerScreen = () => {
+  // const navigateToScannerScreen = () => {
+  //   navigation.navigate("ScannerScreen");
+  // };
+
+  const navigateToScanner = () => {
     navigation.navigate("ScannerScreen");
   };
-
 
   // State untuk menyimpan foto dari card 1 dan card 2
   const [capturedPhoto1, setCapturedPhoto1] = useState(null);
@@ -96,7 +99,7 @@ export default function TiketManualMasuk() {
   return (
     <>
       <View style={styles.scan}>
-        <TouchableOpacity onPress={navigateToScannerScreen}>
+      <TouchableOpacity onPress={navigateToScanner}>
           <View style={styles.left}>
             <AntDesign name="left" size={24} color="black" />
           </View>
@@ -223,7 +226,6 @@ export default function TiketManualMasuk() {
 const styles = StyleSheet.create({
    scan: {
     padding: 20,
-    paddingTop: 50,
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "white",
@@ -257,7 +259,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 12,
     borderWidth: 1,
-    borderColor: "#F0F2F4",
+    borderColor: "#E6E6E6",
     borderRadius: 12,
   },
   text: {
@@ -303,7 +305,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     borderRadius: 50,
     position: "absolute",
-    bottom: 30,
+    bottom: 120,
     left: "50%",
     marginLeft: -25,
     borderColor: "white",

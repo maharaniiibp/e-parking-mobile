@@ -1,9 +1,11 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 import GrafikScreen from "./GrafikScreen";
 
 const HomeScreen = () => {
   return (
+    <ScrollView>
+
     <View style={styles.body}>
       {/* section 1 */}
       <View style={styles.satu}>
@@ -53,6 +55,8 @@ const HomeScreen = () => {
         </View>
       </View>
     </View>
+    </ScrollView>
+
   );
 };
 
@@ -64,7 +68,7 @@ const styles = StyleSheet.create({
   // section 1
   satu: {
     padding: 20,
-    paddingTop: 50,
+    paddingTop: 40,
   },
   rowsatu: {
     flexDirection: "row",
@@ -114,7 +118,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   coldua: {
-    paddingTop: 10,
+    paddingTop: 20,
     marginLeft: 15,
   },
 

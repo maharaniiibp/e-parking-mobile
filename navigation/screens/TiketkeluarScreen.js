@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity,TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -33,9 +33,13 @@ export default function TiketkeluarScreen() {
       <Text style={styles.event}>Nomor Polisi</Text>
       <View style={styles.pven}>
         <View style={styles.containerevent}>
-          <View>
-            <Text style={styles.textevent}>Masukkan Nomor Polisi</Text>
-          </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Masukkan nomor polisi"
+            label=""
+          ></TextInput>
+        </View>
         </View>
       </View>
 
@@ -58,7 +62,7 @@ const styles = StyleSheet.create({
   // section 1
   container: {
     padding: 20,
-    paddingTop: 50,
+    // paddingTop: 50,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
@@ -98,6 +102,7 @@ const styles = StyleSheet.create({
     color: "#E6E6E6",
     fontSize: 17,
   },
+  
   // section 3
 kirim:{
     backgroundColor: '#269544',
